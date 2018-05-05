@@ -1,0 +1,30 @@
+{
+  "name": "test-executor",
+  "version": "1.0.0",
+  "description": "Executes test scripts in the specified dirs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guseyn/node-test-executor.git"
+  },
+  "keywords": [
+    "node",
+    "test",
+    "executor",
+    "cutie",
+    "fs"
+  ],
+  "dependencies": {
+    "@guseyn/cutie": "1.3.2",
+    "@guseyn/cutie-fs": "1.0.3"
+  },
+  "author": "guseyn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Guseyn/node-test-executor/issues"
+  },
+  "homepage": "https://github.com/Guseyn/node-test-executor#readme"
+}
