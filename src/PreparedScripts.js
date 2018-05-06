@@ -1,6 +1,7 @@
 'use strict'
 
 const AsyncObject = require('@guseyn/cutie').AsyncObject;
+const path = require('path');
 
 class PreparedScripts extends AsyncObject {
 
@@ -12,7 +13,9 @@ class PreparedScripts extends AsyncObject {
     return (files) => {
       let scripts = [];
       files.forEach(file => {
-        scripts.push(`node ${file}`);
+        if (path.extname(file).split('.')[1] === 'js') {
+          scripts.push(`node ${file}`);
+        }
       });
       return scripts;
     }
