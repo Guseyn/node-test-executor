@@ -19,13 +19,18 @@ class ExecutedCommand extends AsyncObject {
   onError(error) {
     console.log('\x1b[31m%s\x1b[0m', `${this.script.split('node ')[1]} has failed...`);
     console.log('\x1b[31m%s\x1b[0m', error);
+    return 0;
   }
 
   onResult(stdout, stderr) {
     if (!stderr) {
       console.log('\x1b[32m%s\x1b[0m', `${this.script.split('node ')[1]} has passed...`);
     }
-    return stdout;
+    return 1;
+  }
+
+  continueAfterFail() {
+    return true;
   }
 
 }
