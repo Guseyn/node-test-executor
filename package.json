@@ -1,6 +1,6 @@
 {
   "name": "test-executor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Executes test scripts in the specified dirs.",
   "main": "index.js",
   "scripts": {
