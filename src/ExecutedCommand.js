@@ -26,7 +26,9 @@ class ExecutedCommand extends AsyncObject {
     if (!stderr) {
       console.log('\x1b[32m%s\x1b[0m', `${this.script.split('node ')[1]} has passed...`);
     }
-    console.log(stdout);
+    if (stdout.length !== 0) {
+      console.log(stdout);
+    }
     return 1;
   }
 
