@@ -6,17 +6,17 @@ const FinalMessage = require('./FinalMessage');
 
 class ExecutedScripts extends AsyncObject {
 
-  constructor(scripts) {
-    super(scripts);
+  constructor(scripts, executedTime) {
+    super(scripts, executedTime);
   }
 
   definedSyncCall() {
-    return (scripts) => {
+    return (scripts, executedTime) => {
       let commands = [];
       scripts.forEach(script => {
-        commands.push(new ExecutedCommand(script));
+        commands.push(new ExecutedCommand(script, executedTime));
       });
-      new FinalMessage(...commands).call();
+      new FinalMessage(executedTime, ...commands).call();
       return scripts;
     }
   }
