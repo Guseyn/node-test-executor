@@ -4,12 +4,12 @@ const AsyncObject = require('@guseyn/cutie').AsyncObject;
 
 class FinalMessage extends AsyncObject {
 
-  constructor(...results) {
-    super(...results);
+  constructor(executedTime, ...results) {
+    super(executedTime, ...results);
   }
 
   definedSyncCall() {
-    return (...results) => {
+    return (executedTime, ...results) => {
       let successNumber = results.filter(result => {
         return result === 1
       }).length;
@@ -21,6 +21,7 @@ class FinalMessage extends AsyncObject {
       if (failNumber !== 0) {
         console.log('\x1b[31m%s\x1b[0m', `${failNumber} test(s) ha(s|ve) failed`);
       }
+      executedTime.log('execution time: %d ms');
       return results;
     }
   }

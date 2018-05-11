@@ -5,19 +5,21 @@ const { exec } = require('child_process');
 
 class ExecutedCommand extends AsyncObject {
 
-  constructor(script) {
-    super(script);
+  constructor(script, executedTime) {
+    super(script, executedTime);
   }
 
   definedAsyncCall() {
-    return (script, callback) => {
+    return (script, executedTime, callback) => {
       this.script = script;
+      this.executedTime = executedTime;
       exec(script, callback);
     }
   }
 
   onErrorAndResult(error, stdout, stderr) {
     let result = 1;
+    this.executedTime.update();
     if (!stderr) {
       console.log('\x1b[32m%s\x1b[0m', `${this.script.split('node ')[1]} has passed...`);
     }
