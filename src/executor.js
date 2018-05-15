@@ -1,4 +1,4 @@
-const { ReadFilesOfDirectoryRecursively } = require('@guseyn/cutie-fs');
+const ReadFilesOfDirectoryRecursively = require('./ReadFilesOfDirectoryRecursively');
 const ReadFilesOfDirectories = require('./ReadFilesOfDirectories');
 const PreparedScripts = require('./PreparedScripts');
 const ExecutedScripts = require('./ExecutedScripts');
