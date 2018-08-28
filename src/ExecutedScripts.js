@@ -1,6 +1,6 @@
 'use strict'
 
-const AsyncObject = require('@guseyn/cutie').AsyncObject;
+const AsyncObject = require('@cuties/cutie').AsyncObject;
 const ExecutedCommand = require('./ExecutedCommand');
 const FinalMessage = require('./FinalMessage');
 

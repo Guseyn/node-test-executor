@@ -1,6 +1,6 @@
 'use strict'
 
-const AsyncObject = require('@guseyn/cutie').AsyncObject;
+const AsyncObject = require('@cuties/cutie').AsyncObject;
 const { exec } = require('child_process');
 
 class ExecutedCommand extends AsyncObject {
