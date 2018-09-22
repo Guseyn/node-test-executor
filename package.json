@@ -1,6 +1,6 @@
 {
   "name": "test-executor",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Executes test scripts in the specified dirs.",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "fs"
   ],
   "dependencies": {
-    "@cuties/cutie": "1.4.3"
+    "@cuties/cutie": "1.4.4"
   },
   "author": "guseyn",
   "license": "MIT",
