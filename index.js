@@ -1,1 +1,1 @@
-module.exports = require('./src/executor');
+module.exports.ExecutedTests = require('./src/ExecutedTests');

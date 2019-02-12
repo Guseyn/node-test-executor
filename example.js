@@ -1,3 +1,5 @@
-const executor = require('./src/executor');
+const { ExecutedTests } = require('./index');
 
-executor('./test/dir1', './test/dir2'); // or just executor('./test')
+new ExecutedTests(
+	'./test/test.js', './test/dir1', './test/dir2'
+).call(); // or just new ExecutedTests('./test').call()
