@@ -2,16 +2,19 @@
 
 [![NPM Version][npm-image]][npm-url]
 
-Executes test scripts in the specified dirs.
+Executes test scripts and directories of test scripts.
 
 # How to use
 
 npm: npm i test-executor
 
 ```js
-const executor = require('test-executor');
+const { ExecutedTests } = require('test-executor')
 
-executor('./test/dir1', './test/dir2'); // or just executor('./test')
+new ExecutedTests(
+	'./test/test.js', './test/dir1', './test/dir2'
+).call() // or just new ExecutedTests('./test').call()
+
 
 ```
 Output will be smth like this (example of case when one of the tests fails):
