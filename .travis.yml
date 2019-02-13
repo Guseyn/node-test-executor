@@ -11,10 +11,9 @@ before_deploy:
 - npm run build
 deploy:
   - provider: releases
-    skip_cleanup: true
     api_key:
-      secure: NyxY7T4REcxEhpAj/VMD4hfv/0Id3yVpo/dTFiVtQhu1JX3ruJ6C6KlGa3k+aHV3Z5Zbwmfm5+azMq+l7Kone/BI7V2m1PbwMRUcEJdBVPfkZKfsIH7rN/7cvJas2pKXCCC/QFooMsFjUebRTZM8KTGxxLwcH3iNwKd2H8fAsCQak0uvjJSbsWmau5L/SLJFoOUpMLDhpH94I/wzZt2vA69A1ziUaMQpYZYV9PM1DwJbnCqtlncwQbmodFsANu7ZlExEEfvPbaLoR5F3zJLd+9aSpRAjfdFNCqwXK3nwyWmMt1ban9EtBjW+OL9ZnBA44Lqm3iZc2b9GCBUX/35XaWBCfhueOA//Eo0QFIV8q3g6iUk/M/PoickBEtax956t/Dkg8vGd914TZ1eYlUa+VNsGIk4iMbtpPXDlFDithplxUgZEY4/m3yMPA1v7KXtjfJ933RqG1Rvym42JsmEDW57i9zfcEhS45ZnxkrJl1hPwT8rEAhFtpkXEBPCQXiHnopXDe2e9WzibkhinIT4wPydFtV62gsAhPJ8YW52v8ZlCCK+XDNi66SYGxXtwm6gpKOsafyTtUOOeDeq1NDRf0RCO3lFYC6z/k/8xrKRVqmYxc/i7efokqBAtMzebGuXEyZL4SMRIXM6ZpDmcGPdxVQKEpoN74oKP39Ji+rhMRbE=
-    file: 'README.md'
+      secure: gqgNXqrTBE7sUXYwXVTiQv9pz/5VQroIXDsuCZxuWx4BLcUqd8hOGqA5rn3LIKIqriQAFNLGqeVvOlPixoytHDYBKCcaNlbtSDcl24cHQzxrKvIVVDxaMEYtvB3sLC1I+NzwCczyo+xMtmHHzjdhCTFik4LssuH7K/uPYckqhh7V7zJCQGQq/8z/50hMffa3WpvqzVpUqKDf9lcPxUTfq5h9BIkzxEYSy8Lpr9l1gbUYZzaiGYuypJ2ftf5nkxbMxN+XWaySdHiizP3GYkYP4CyUj4KyUG7dCSmXn8VLzqlstqrylc/qb/Sfgb1rA5bW8ywyCIkPzXhvXnZjLtbKSapSORl90wHC9q2nKIVOH1w8W0LX4Vf02oNEGzRfMb014OXPlrtr7lk1+hASoRyS/qKqE2chvIipsHUmoKu4jAzw49EJg7cjO0LWBLL1whwBJc+G/JE6Ofj6dcImH9yA6nM2mnK6Id4XEXDfiuisZXIEAJXi7I7ZHkqmjwdokFtikVhrxQ/X53cEPWvVJ6l85T5874d6ftS+00Jd31hFyGH/M1in266D5jpyoLFx9L5NMZ/waBh3zRjF8Qggj/8D6TKgII5brFs1INDCML0os/7M/46WEss1k3hL2wCEk+XNAt9gmkqESrsi7ZNmduVwgGzVHpwr9w7TndyGdTue/rM=
+    file: README.md
     on:
       tags: true
       repo: Guseyn/node-test-executor
