@@ -1,8 +1,10 @@
 # node-test-executor
 
 [![NPM Version][npm-image]][npm-url]
+[![Build Status](https://travis-ci.org/Guseyn/node-test-executor.svg?branch=master)](https://travis-ci.org/Guseyn/node-test-executor)
+[![codecov](https://codecov.io/gh/Guseyn/node-test-executor/branch/master/graph/badge.svg)](https://codecov.io/gh/Guseyn/node-test-executor)
 
-Executes test scripts and directories of test scripts. It based on [Async Tree Pattern](https://github.com/Guseyn/async-tree-patern/blob/master/Async_Tree_Patern.pdf).
+Executes test scripts and directories of test scripts. It's based on [Async Tree Pattern](https://github.com/Guseyn/async-tree-patern/blob/master/Async_Tree_Patern.pdf).
 
 ## Install
 `npm i test-executor`
