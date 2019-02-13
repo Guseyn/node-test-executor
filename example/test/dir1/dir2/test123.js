@@ -1,6 +1,6 @@
-const assert = require('assert');
+const assert = require('assert')
 
-console.log('useful info');
+console.log('useful info')
 
-console.log('\nthis test is supposed to fail');
-assert(false);
+console.log('\nthis test is supposed to fail')
+assert(false)

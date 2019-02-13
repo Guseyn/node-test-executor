@@ -1,6 +1,6 @@
 'use strict'
 
-const { DeepStrictEqualAssertion } = require('@cuties/assert')
+const DeepStrictEqualAssertion = require('./../assert/DeepStrictEqualAssertion')
 const ExecutionTime = require('./../src/ExecutionTime')
 const FinalMessage = require('./../src/FinalMessage')
 
