@@ -26,11 +26,11 @@ Output will be smth like this (example of case when one of the tests fails):
 [npm-image]: https://img.shields.io/npm/v/test-executor.svg
 [npm-url]: https://npmjs.org/package/test-executor
 
-## Run example
-`npm run example`
-
 ## Test
 `npm run test`
 
 ## Build
 `npm run build`
+
+## Run example
+`npm run example`

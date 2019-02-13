@@ -14,6 +14,7 @@ branches:
     - master
 deploy:
   - provider: releases
+    skip_cleanup: true
     api_key:
       secure: gqgNXqrTBE7sUXYwXVTiQv9pz/5VQroIXDsuCZxuWx4BLcUqd8hOGqA5rn3LIKIqriQAFNLGqeVvOlPixoytHDYBKCcaNlbtSDcl24cHQzxrKvIVVDxaMEYtvB3sLC1I+NzwCczyo+xMtmHHzjdhCTFik4LssuH7K/uPYckqhh7V7zJCQGQq/8z/50hMffa3WpvqzVpUqKDf9lcPxUTfq5h9BIkzxEYSy8Lpr9l1gbUYZzaiGYuypJ2ftf5nkxbMxN+XWaySdHiizP3GYkYP4CyUj4KyUG7dCSmXn8VLzqlstqrylc/qb/Sfgb1rA5bW8ywyCIkPzXhvXnZjLtbKSapSORl90wHC9q2nKIVOH1w8W0LX4Vf02oNEGzRfMb014OXPlrtr7lk1+hASoRyS/qKqE2chvIipsHUmoKu4jAzw49EJg7cjO0LWBLL1whwBJc+G/JE6Ofj6dcImH9yA6nM2mnK6Id4XEXDfiuisZXIEAJXi7I7ZHkqmjwdokFtikVhrxQ/X53cEPWvVJ6l85T5874d6ftS+00Jd31hFyGH/M1in266D5jpyoLFx9L5NMZ/waBh3zRjF8Qggj/8D6TKgII5brFs1INDCML0os/7M/46WEss1k3hL2wCEk+XNAt9gmkqESrsi7ZNmduVwgGzVHpwr9w7TndyGdTue/rM=
     file: README.md
