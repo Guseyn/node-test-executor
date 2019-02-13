@@ -9,9 +9,6 @@ script:
   report --reporter lcovonly -- -R spec; codecov; fi
 before_deploy:
 - npm run build
-branches:
-  only: 
-    - master
 deploy:
   - provider: releases
     skip_cleanup: true
