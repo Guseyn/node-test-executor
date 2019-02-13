@@ -14,8 +14,7 @@ branches:
 before_deploy:
   - git config --local user.name "Guseyn"
   - git config --local user.email "guseynism@gmail.com"
-  - export TRAVIS_TAG=${TRAVIS_TAG:-$TRAVIS_COMMIT_MESSAGE}
-  - git tag $TRAVIS_TAG
+  - git tag RELEASE-$TRAVIS_COMMIT_MESSAGE
 deploy:
   - provider: releases
     skip_cleanup: true
