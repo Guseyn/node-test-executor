@@ -4,7 +4,8 @@
   "description": "Executes test scripts in the specified dirs.",
   "main": "index.js",
   "scripts": {
-    "test": "node example.js"
+    "test": "node test-executor",
+    "example": "node example/example"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
     "fs"
   ],
   "dependencies": {
+    "@cuties/assert": "^1.1.5",
     "@cuties/cutie": "1.4.4"
   },
   "author": "guseyn",
