@@ -15,9 +15,6 @@ before_deploy:
   - git config --local user.name "Guseyn"
   - git config --local user.email "guseynism@gmail.com"
   - git tag RELEASE-$TRAVIS_COMMIT_MESSAGE
-  on:
-    branch:
-      - master
 deploy:
   - provider: releases
     skip_cleanup: true
