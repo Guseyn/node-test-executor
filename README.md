@@ -4,9 +4,10 @@
 
 Executes test scripts and directories of test scripts.
 
-# How to use
+# Install
+`npm i test-executor`
 
-npm: npm i test-executor
+# How to use
 
 ```js
 const { ExecutedTests } = require('test-executor')
@@ -15,7 +16,6 @@ new ExecutedTests(
 	'./test/test.js', './test/dir1', './test/dir2'
 ).call() // or just new ExecutedTests('./test').call()
 
-
 ```
 Output will be smth like this (example of case when one of the tests fails):
 
@@ -23,3 +23,6 @@ Output will be smth like this (example of case when one of the tests fails):
 
 [npm-image]: https://img.shields.io/npm/v/test-executor.svg
 [npm-url]: https://npmjs.org/package/test-executor
+
+# Run example
+`npm run example`
