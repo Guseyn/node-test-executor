@@ -8,6 +8,9 @@ script:
 - npm run build
 - ./node_modules/.bin/nyc report --reporter lcovonly -- -R spec
 - codecov
+- export BODY=$(git log "${TRAVIS_COMMIT_MESSAGE}" --oneline --pretty=tformat:"%h %B")
+- echo ${TRAVIS_COMMIT_MESSAGE}
+- echo ${BODY}
 branches:
   only:
     - master
