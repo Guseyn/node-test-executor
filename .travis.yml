@@ -1,23 +1,19 @@
 language: node_js
 node_js:
 - lts/*
-install:
-- npm ci
-- npm install -g codecov
-script:
-- npm run build
-- ./node_modules/.bin/nyc report --reporter lcovonly -- -R spec
-- codecov
-- export BODY=$(git log "${TRAVIS_COMMIT_MESSAGE}" --oneline --pretty=tformat:"%h %B")
-- echo ${TRAVIS_COMMIT_MESSAGE}
-- echo ${BODY}
+install: |-
+  npm ci
+  npm install -g codecov
+script: |-
+  npm run build
+  ./node_modules/.bin/nyc report --reporter lcovonly -- -R spec
+  codecov
+  echo ${TRAVIS_COMMIT_RANGE}
+  export BODY=$(git log "${TRAVIS_COMMIT_RANGE}" --oneline --pretty=tformat:"%h %B")
+  echo ${BODY}
 branches:
   only:
     - master
-before_deploy:
-  - export BODY=$(git log "${TRAVIS_COMMIT_MESSAGE}" --oneline --pretty=tformat:"%h %B")
-  - echo ${TRAVIS_COMMIT_MESSAGE}
-  - echo ${BODY}
 deploy:
   - provider: releases
     skip_cleanup: true
@@ -26,7 +22,7 @@ deploy:
     file: README.md
     name: Release $(date +'%d.%m.%Y %R')
     tag_name: "${TRAVIS_COMMIT_MESSAGE}"
-    body: ${BODY}
+    body: "${BODY}"
     on:
       repo: Guseyn/node-test-executor
       branch:
