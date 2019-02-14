@@ -11,6 +11,10 @@ script:
 branches:
   only:
     - master
+before_deploy:
+  - export BODY=$(git log "${TRAVIS_COMMIT_MESSAGE}" --oneline --pretty=tformat:"%h %B")
+  - echo ${TRAVIS_COMMIT_MESSAGE}
+  - echo ${BODY}
 deploy:
   - provider: releases
     skip_cleanup: true
@@ -19,8 +23,7 @@ deploy:
     file: README.md
     name: Release $(date +'%d.%m.%Y %R')
     tag_name: "${TRAVIS_COMMIT_MESSAGE}"
-    body: 
-      - $(git log $TRAVIS_COMMIT_RANGE --oneline --pretty=tformat:"%h %B")
+    body: ${BODY}
     on:
       repo: Guseyn/node-test-executor
       branch:
