@@ -8,12 +8,12 @@ script: |-
   npm run build
   ./node_modules/.bin/nyc report --reporter lcovonly -- -R spec
   codecov
-  echo $(git log "${TRAVIS_COMMIT_RANGE}" --oneline --pretty=tformat:"%h %B")
+  echo $(git log "${TRAVIS_COMMIT_RANGE}" --oneline --pretty=tformat:"%h %B" | tr '\n' ' ')
 branches:
   only:
     - master
 before_deploy:
-  - export BODY="$(git log "${TRAVIS_COMMIT_RANGE}" --oneline --pretty=tformat:"%h %B")"
+  - export BODY=$(git log "${TRAVIS_COMMIT_RANGE}" --oneline --pretty=tformat:"%h %B" | tr '\n' ' ')
 deploy:
   - provider: releases
     skip_cleanup: true
