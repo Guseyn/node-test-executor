@@ -13,7 +13,7 @@ branches:
   only:
     - master
 before_deploy:
-  - export BODY=$(git log "${TRAVIS_COMMIT_RANGE}" --oneline --pretty=tformat:"%h %B") | tr '\n' ' '
+  - export BODY="$(git log "${TRAVIS_COMMIT_RANGE}" --oneline --pretty=tformat:"%h %B")"
 deploy:
   - provider: releases
     skip_cleanup: true
