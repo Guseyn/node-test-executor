@@ -8,12 +8,14 @@ script: |-
   npm run build
   ./node_modules/.bin/nyc report --reporter lcovonly -- -R spec
   codecov
-  echo $'Cahnge log:\n'$(git log "${TRAVIS_COMMIT_RANGE}" --oneline)
+  log=$(git log 23237d...cebfe3c --oneline)
+  echo $'**Change log:**<br/>'${log//$'\n'/<br/>}
 branches:
   only:
     - master
-before_deploy:
-  - export BODY=$'Cahnge log:\n'$(git log "${TRAVIS_COMMIT_RANGE}" --oneline)
+before_deploy: |-
+  log=$(git log 23237d...cebfe3c --oneline)
+  export BODY=$'**Change log:**<br/>'${log//$'\n'/<br/>}
 deploy:
   - provider: releases
     skip_cleanup: true
