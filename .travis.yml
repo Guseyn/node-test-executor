@@ -8,11 +8,11 @@ script: |-
   npm run build
   ./node_modules/.bin/nyc report --reporter lcovonly -- -R spec
   codecov
+  echo $(git log "${TRAVIS_COMMIT_RANGE}" --oneline --pretty=tformat:"%h %B")
 branches:
   only:
     - master
 before_deploy:
-  - IFS=''
   - export BODY=$(git log "${TRAVIS_COMMIT_RANGE}" --oneline --pretty=tformat:"%h %B")
 deploy:
   - provider: releases
