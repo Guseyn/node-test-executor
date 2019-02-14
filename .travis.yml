@@ -12,6 +12,7 @@ branches:
   only:
     - master
 before_deploy:
+  - IFS=''
   - export BODY=$(git log "${TRAVIS_COMMIT_RANGE}" --oneline --pretty=tformat:"%h %B")
 deploy:
   - provider: releases
