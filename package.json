@@ -20,7 +20,7 @@
     "fs"
   ],
   "dependencies": {
-    "@cuties/cutie": "^1.6.7"
+    "@cuties/cutie": "^1.6.8"
   },
   "author": "guseyn",
   "license": "MIT",
