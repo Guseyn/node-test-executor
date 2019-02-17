@@ -1,6 +1,6 @@
 'use strict'
 
-const { AsyncObject } = require('./../index')
+const { AsyncObject } = require('@cuties/cutie')
 const executedLint = require('./custom-calls/executedLint')
 
 // Represented result is process
