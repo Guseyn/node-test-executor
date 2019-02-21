@@ -8,7 +8,7 @@ class PreparedScripts extends AsyncObject {
     super(files)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (files) => {
       let scripts = []
       files.forEach(file => {
