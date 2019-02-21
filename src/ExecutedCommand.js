@@ -8,7 +8,7 @@ class ExecutedCommand extends AsyncObject {
     super(script, executedTime)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (script, executedTime, callback) => {
       this.script = script
       this.executedTime = executedTime

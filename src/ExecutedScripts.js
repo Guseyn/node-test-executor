@@ -9,7 +9,7 @@ class CallbackForFinalMessage extends AsyncObject {
     super(callback, finalMessage)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (callback, finalMessage) => {
       callback(finalMessage)
       return callback
@@ -23,7 +23,7 @@ class ExecutedScripts extends AsyncObject {
     super(scripts, executedTime)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (scripts, executedTime, callback) => {
       let commands = []
       scripts.forEach(script => {
