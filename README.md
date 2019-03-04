@@ -1,5 +1,7 @@
 # node-test-executor
 
+<img src="https://github.com/Guseyn/logos/raw/master/test-executor.svg?sanitize=true">
+
 [![NPM Version](https://img.shields.io/npm/v/test-executor.svg)](https://npmjs.org/package/test-executor)
 [![Build Status](https://travis-ci.org/Guseyn/node-test-executor.svg?branch=master)](https://travis-ci.org/Guseyn/node-test-executor)
 [![codecov](https://codecov.io/gh/Guseyn/node-test-executor/branch/master/graph/badge.svg)](https://codecov.io/gh/Guseyn/node-test-executor)
