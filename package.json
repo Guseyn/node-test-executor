@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/Guseyn/node-test-executor#readme",
   "dependencies": {
-    "@cuties/cutie": "^1.7.4"
+    "@cuties/cutie": "^1.7.5"
   },
   "devDependencies": {
     "eslint": "^5.13.0",
