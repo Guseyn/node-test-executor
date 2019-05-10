@@ -4,7 +4,7 @@
   "description": "Executes test scripts in the specified dirs.",
   "main": "index.js",
   "scripts": {
-    "test": "node test-executor",
+    "test": "node test",
     "build": "node build",
     "example": "node example"
   },
